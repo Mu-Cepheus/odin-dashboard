@@ -1,0 +1,1 @@
+Final project for TOP [intermediate HTML and CSS course](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css). Front-end layouts combining flexbox and CSS grid.
