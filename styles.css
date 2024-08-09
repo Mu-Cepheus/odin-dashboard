@@ -28,7 +28,6 @@ aside {
     & div.sidebar-section {
         display: flex;
         flex-direction: column;
-        justify-items: center;
         gap: 1rem;
         padding: 1.5rem 0 0 1rem;
 
@@ -64,7 +63,8 @@ aside {
     }
 
     & div.sidebar-section.logo {
-        padding: 1.5rem 0 0 0.5rem;
+        padding: 0;
+        justify-self: center;
     }
 }
 
@@ -77,7 +77,8 @@ main {
 
     & h3,
     h4 {
-        font-weight: normal;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
     }
 
     & .card {
@@ -89,12 +90,37 @@ main {
 
     & .sidebox {
         background-color: var(--white);
+        padding: 20px;
+        gap: 1rem;
+        border-radius: 15px;
         width: 90%;
         height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    & #announcements,
+    #trending {
+        margin: 1rem 0 1rem 0;
+
+        & .sidebox-entry {
+            border-bottom: 1px solid var(--gray);
+            flex: auto;
+            overflow: auto;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            & p {
+                font-size: 0.85rem;
+            }
+        }
     }
 
     & #projects {
         grid-area: 1 / 1 / 3 / 2;
+        padding: 1rem;
     }
 
     & #announcements {
@@ -103,6 +129,18 @@ main {
 
     & #trending {
         grid-area: 2 / 2;
+
+        & .sidebox>div {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            & img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+        }
     }
 }
 
@@ -187,13 +225,13 @@ header {
                 display: flex;
                 flex-direction: column;
                 align-self: start;
-                
 
-                & :first-child{
+
+                & :first-child {
                     font-size: 0.8rem;
                 }
 
-                & :last-child{
+                & :last-child {
                     font-size: 1.5rem;
                 }
             }
